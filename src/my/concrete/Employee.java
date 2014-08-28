@@ -12,7 +12,10 @@ package my.concrete;
  */
 public class Employee {
     
+    // String variables used to hold employees biographical information
     private String name, hireDate, address, dateOfBirth, SSN, phoneNum;
+    
+    //Constructor for Employee
     
     public Employee (String name, String hireDate, String address, String dateOfBirth, 
             String SSN, String phoneNum){
@@ -24,53 +27,75 @@ public class Employee {
         this.phoneNum = phoneNum;
     }
 
+    // Returns employee name
+    
     public String getName() {
         return name;
     }
-
+    
+    // Sets employee name
+    
     public void setName(String name) {
         this.name = name;
     }
 
+    // Gets employee hire date
+    
     public String getHireDate() {
         return hireDate;
     }
-
+    
+    // Sets employee hire date
+    
     public void setHireDate(String hireDate) {
         this.hireDate = hireDate;
     }
 
+    // Gets employee address
+    
     public String getAddress() {
         return address;
     }
 
+    // Sets Employee Address
+    
     public void setAddress(String address) {
         this.address = address;
     }
 
+    // Gets employee date of birth
+    
     public String getDateOfBirth() {
         return dateOfBirth;
     }
 
+    // Sets employee date of birth
+    
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
+    // Gets employee social security number
+    
     public String getSSN() {
         return SSN;
     }
 
+    // Sets employee social security number
+    
     public void setSSN(String SSN) {
         this.SSN = SSN;
     }
 
+    // Gets employee phone number
+    
     public String getPhoneNum() {
         return phoneNum;
     }
 
+    // Sets Employee phone number
+    
     public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
-    
-    
 }

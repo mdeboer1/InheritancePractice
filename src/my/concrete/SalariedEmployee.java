@@ -11,18 +11,28 @@ package my.concrete;
  * @author mdeboer1
  */
 public class SalariedEmployee extends Employee {
+    
+    // Double for employee salary
+    
     private double salary;
 
+    // Constructor, calls Employee constructor, sets salary
+    
     public SalariedEmployee(String name, String hireDate, String address, 
-            String dateOfBirth, String SSN, String phoneNum) {
+            String dateOfBirth, String SSN, String phoneNum, double salary) {
         
         super(name, hireDate, address, dateOfBirth, SSN, phoneNum);
+        this.salary = salary;
     }
 
+    //returns employee salary
+    
     public double getSalary() {
         return salary;
     }
 
+    //sets employee salary
+    
     public void setSalary(double salary) {
         this.salary = salary;
     }
