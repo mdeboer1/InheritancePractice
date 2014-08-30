@@ -166,48 +166,123 @@ public class TestConcreteClasses {
 
             // This section tests a SalaryPlusCommisionEmployee class
 
-            System.out.println("Enter the employee's name, first and last.");
-            name = keyboard.nextLine();
+//            System.out.println("Enter the employee's name, first and last.");
+//            name = keyboard.nextLine();
+//
+//            System.out.println("Enter in the employee's hire date.");
+//            hireDate = keyboard.nextLine();
+//
+//            System.out.println("Enter in the employee's address.");
+//            address = keyboard.nextLine();
+//
+//            System.out.println("Enter in the employee's date of birth.");
+//            dateOfBirth = keyboard.nextLine();
+//
+//            System.out.println("Enter in the employee's Social Security Number.");
+//            SSN = keyboard.nextLine();
+//
+//            System.out.println("Enter in the employee's phone number.");
+//            phoneNum = keyboard.nextLine();
+//
+//            System.out.println("Enter in the employee's salary.");
+//            salary = Double.parseDouble(keyboard.nextLine());
+//
+//            System.out.println("Enter in the employee's commision percentage.");
+//            commisionPercentage = Double.parseDouble(keyboard.nextLine());
+//
+//            System.out.println("Enter in the employee's total commisionable "
+//                    + "sales amount.");
+//            commisionedSalesTotal = Double.parseDouble(keyboard.nextLine());
+//
+//            SalaryPlusCommisionEmployee e = new SalaryPlusCommisionEmployee(name,
+//                hireDate, address, dateOfBirth, SSN, phoneNum, salary);
+//
+//            e.setCommisionPercentage(commisionPercentage);
+//            e.setCommisionedSalesAmount(commisionedSalesTotal);
+//
+//            System.out.println("The first employee's name is: " + e.getName() +
+//                    ".  Their hire date is: " + e.getHireDate() + ".  Their address "
+//                    + "is: " + e.getAddress() + ".  Their date of birth is: " +
+//                    e.getDateOfBirth() + ".  Their Social Security Number is: " +
+//                    e.getSSN() + ".  Their phone number is: " + e.getPhoneNum() +
+//                    ".  Their salary is: " + e.getSalary() + ".  Their commision "
+//                    + "percentage is: " + e.getCommisionPercentage() +" .  Their"
+//                    + " total commisionable sales is: " + e.getCommisionedSalesAmount() +
+//                    ".  Their total pay is: " + e.getCommisionTotal());
+        
+//             This section instantiates a salaried employee, using Employee interface as the super class
+//        
+//             System.out.println("Enter the employee's name, first and last.");
+//             name = keyboard.nextLine();
+//
+//             System.out.println("Enter in the employee's hire date.");
+//             hireDate = keyboard.nextLine();
+//
+//             System.out.println("Enter in the employee's address.");
+//             address = keyboard.nextLine();
+//
+//             System.out.println("Enter in the employee's date of birth.");
+//             dateOfBirth = keyboard.nextLine();
+//
+//             System.out.println("Enter in the employee's Social Security Number.");
+//             SSN = keyboard.nextLine();
+//
+//             System.out.println("Enter in the employee's phone number.");
+//             phoneNum = keyboard.nextLine();
+//
+//             System.out.println("Enter in the employee's salary.");
+//             salary = Double.parseDouble(keyboard.nextLine());
+//
+//             myinterface.SalariedEmployee f = new myinterface.SalariedEmployee(name, hireDate, address, 
+//                dateOfBirth, SSN, phoneNum, salary);
+//
+//             System.out.println("The first employee's name is: " + f.getName() +
+//                        ".  Their hire date is: " + f.getHireDate() + ".  Their address "
+//                        + "is: " + f.getAddress() + ".  Their date of birth is: " +
+//                        f.getDateOfBirth() + ".  Their Social Security Number is: " +
+//                        f.getSSN() + ".  Their phone number is: " + f.getPhoneNum() +
+//                        ".  Their salary is: " + f.getSalary() + ".");
+          
+        //This section instantiates an hourly employee       
+        
+        System.out.println("Enter the employee's name, first and last.");
+        name = keyboard.nextLine();
 
-            System.out.println("Enter in the employee's hire date.");
-            hireDate = keyboard.nextLine();
+        System.out.println("Enter in the employee's hire date.");
+        hireDate = keyboard.nextLine();
 
-            System.out.println("Enter in the employee's address.");
-            address = keyboard.nextLine();
+        System.out.println("Enter in the employee's address.");
+        address = keyboard.nextLine();
 
-            System.out.println("Enter in the employee's date of birth.");
-            dateOfBirth = keyboard.nextLine();
+        System.out.println("Enter in the employee's date of birth.");
+        dateOfBirth = keyboard.nextLine();
 
-            System.out.println("Enter in the employee's Social Security Number.");
-            SSN = keyboard.nextLine();
+        System.out.println("Enter in the employee's Social Security Number.");
+        SSN = keyboard.nextLine();
 
-            System.out.println("Enter in the employee's phone number.");
-            phoneNum = keyboard.nextLine();
+        System.out.println("Enter in the employee's phone number.");
+        phoneNum = keyboard.nextLine();
 
-            System.out.println("Enter in the employee's salary.");
-            salary = Double.parseDouble(keyboard.nextLine());
+        System.out.println("Enter in the employee's hourly wage.");
+        hourlyWage = Double.parseDouble(keyboard.nextLine());
 
-            System.out.println("Enter in the employee's commision percentage.");
-            commisionPercentage = Double.parseDouble(keyboard.nextLine());
+        System.out.println("Enter in the employee's hours worked.");
+        hoursWorked = Double.parseDouble(keyboard.nextLine());
 
-            System.out.println("Enter in the employee's total commisionable "
-                    + "sales amount.");
-            commisionedSalesTotal = Double.parseDouble(keyboard.nextLine());
+        myinterface.HourlyEmployee g = new myinterface.HourlyEmployee(name, hireDate, address, 
+            dateOfBirth, SSN, phoneNum);
 
-            SalaryPlusCommisionEmployee e = new SalaryPlusCommisionEmployee(name,
-                hireDate, address, dateOfBirth, SSN, phoneNum, salary);
-
-            e.setCommisionPercentage(commisionPercentage);
-            e.setCommisionedSalesAmount(commisionedSalesTotal);
-
-            System.out.println("The first employee's name is: " + e.getName() +
-                    ".  Their hire date is: " + e.getHireDate() + ".  Their address "
-                    + "is: " + e.getAddress() + ".  Their date of birth is: " +
-                    e.getDateOfBirth() + ".  Their Social Security Number is: " +
-                    e.getSSN() + ".  Their phone number is: " + e.getPhoneNum() +
-                    ".  Their salary is: " + e.getSalary() + ".  Their commision "
-                    + "percentage is: " + e.getCommisionPercentage() +" .  Their"
-                    + " total commisionable sales is: " + e.getCommisionedSalesAmount() +
-                    ".  Their total pay is: " + e.getCommisionTotal());
+        g.setHourlyWage(hourlyWage);
+        g.setHoursWorked(hoursWorked);
+        
+        System.out.println("The first employee's name is: " + g.getName() +
+                    ".  Their hire date is: " + g.getHireDate() + ".  Their address "
+                    + "is: " + g.getAddress() + ".  Their date of birth is: " +
+                    g.getDateOfBirth() + ".  Their Social Security Number is: " +
+                    g.getSSN() + ".  Their phone number is: " + g.getPhoneNum() +
+                    ".  Their hourly wage is: " + g.getHourlyWage() + ".  Their"
+                    + " hours worked is: " + g.getHoursWorked()+ ".  Their total"
+                    + " pay is: " + g.getPayTotal() + ".");
+                
     }
 }    
