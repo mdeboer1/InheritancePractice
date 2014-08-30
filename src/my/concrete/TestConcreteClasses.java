@@ -94,6 +94,78 @@ public class TestConcreteClasses {
             * class object
             */
             
+//            System.out.println("Enter the employee's name, first and last.");
+//            name = keyboard.nextLine();
+//
+//            System.out.println("Enter in the employee's hire date.");
+//            hireDate = keyboard.nextLine();
+//            
+//            System.out.println("Enter in the employee's address.");
+//            address = keyboard.nextLine();
+//            
+//            System.out.println("Enter in the employee's date of birth.");
+//            dateOfBirth = keyboard.nextLine();
+//            
+//            System.out.println("Enter in the employee's Social Security Number.");
+//            SSN = keyboard.nextLine();
+//            
+//            System.out.println("Enter in the employee's phone number.");
+//            phoneNum = keyboard.nextLine();
+//            
+//            System.out.println("Enter in the employee's salary.");
+//            salary = Double.parseDouble(keyboard.nextLine());
+//            
+//            SalariedEmployee c = new SalariedEmployee(name, hireDate, address,
+//                    dateOfBirth, SSN, phoneNum, salary);
+//            
+//            System.out.println("Enter the employee's name, first and last.");
+//            name = keyboard.nextLine();
+//
+//            System.out.println("Enter in the employee's hire date.");
+//            hireDate = keyboard.nextLine();
+//            
+//            System.out.println("Enter in the employee's address.");
+//            address = keyboard.nextLine();
+//            
+//            System.out.println("Enter in the employee's date of birth.");
+//            dateOfBirth = keyboard.nextLine();
+//            
+//            System.out.println("Enter in the employee's Social Security Number.");
+//            SSN = keyboard.nextLine();
+//            
+//            System.out.println("Enter in the employee's phone number.");
+//            phoneNum = keyboard.nextLine();
+//            
+//            System.out.println("Enter in the employee's hourly wage.");
+//            hourlyWage = Double.parseDouble(keyboard.nextLine());
+//            
+//            System.out.println("Enter in the employee's hours worked.");
+//            hoursWorked = Double.parseDouble(keyboard.nextLine());
+//            
+//            HourlyEmployee d = new HourlyEmployee(name, hireDate, address, 
+//                dateOfBirth, SSN, phoneNum);
+//            
+//            d.setHourlyWage(hourlyWage);
+//            d.setHoursWorked(hoursWorked);
+//            
+//            System.out.println("The first employee's name is: " + c.getName() +
+//                    ".  Their hire date is: " + c.getHireDate() + ".  Their address "
+//                    + "is: " + c.getAddress() + ".  Their date of birth is: " +
+//                    c.getDateOfBirth() + ".  Their Social Security Number is: " +
+//                    c.getSSN() + ".  Their phone number is: " + c.getPhoneNum() +
+//                    ".  Their salary is: " + c.getSalary() + ".");
+//            
+//            System.out.println("The first employee's name is: " + d.getName() +
+//                    ".  Their hire date is: " + d.getHireDate() + ".  Their address "
+//                    + "is: " + d.getAddress() + ".  Their date of birth is: " +
+//                    d.getDateOfBirth() + ".  Their Social Security Number is: " +
+//                    d.getSSN() + ".  Their phone number is: " + d.getPhoneNum() +
+//                    ".  Their hourly wage is: " + d.getHourlyWage() + ".  Their"
+//                    + " hours worked is: " + d.getHoursWorked()+ ".  Their total"
+//                    + " pay is: " + d.getPayTotal() + ".");
+            
+                // This section tests a SalaryPlusCommisionEmployee class
+            
             System.out.println("Enter the employee's name, first and last.");
             name = keyboard.nextLine();
 
@@ -115,53 +187,27 @@ public class TestConcreteClasses {
             System.out.println("Enter in the employee's salary.");
             salary = Double.parseDouble(keyboard.nextLine());
             
-            SalariedEmployee c = new SalariedEmployee(name, hireDate, address,
-                    dateOfBirth, SSN, phoneNum, salary);
+            System.out.println("Enter in the employee's commision percentage.");
+            commisionPercentage = Double.parseDouble(keyboard.nextLine());
             
-            System.out.println("Enter the employee's name, first and last.");
-            name = keyboard.nextLine();
-
-            System.out.println("Enter in the employee's hire date.");
-            hireDate = keyboard.nextLine();
+            System.out.println("Enter in the employee's total commisionable "
+                    + "sales amount.");
+            commisionedSalesTotal = Double.parseDouble(keyboard.nextLine());
             
-            System.out.println("Enter in the employee's address.");
-            address = keyboard.nextLine();
+            SalaryPlusCommisionEmployee e = new SalaryPlusCommisionEmployee(name,
+                hireDate, address, dateOfBirth, SSN, phoneNum, salary);
             
-            System.out.println("Enter in the employee's date of birth.");
-            dateOfBirth = keyboard.nextLine();
+            e.setCommisionPercentage(commisionPercentage);
+            e.setCommisionedSalesAmount(commisionedSalesTotal);
             
-            System.out.println("Enter in the employee's Social Security Number.");
-            SSN = keyboard.nextLine();
-            
-            System.out.println("Enter in the employee's phone number.");
-            phoneNum = keyboard.nextLine();
-            
-            System.out.println("Enter in the employee's hourly wage.");
-            hourlyWage = Double.parseDouble(keyboard.nextLine());
-            
-            System.out.println("Enter in the employee's hours worked.");
-            hoursWorked = Double.parseDouble(keyboard.nextLine());
-            
-            HourlyEmployee d = new HourlyEmployee(name, hireDate, address, 
-                dateOfBirth, SSN, phoneNum);
-            
-            d.setHourlyWage(hourlyWage);
-            d.setHoursWorked(hoursWorked);
-            
-            System.out.println("The first employee's name is: " + c.getName() +
-                    ".  Their hire date is: " + c.getHireDate() + ".  Their address "
-                    + "is: " + c.getAddress() + ".  Their date of birth is: " +
-                    c.getDateOfBirth() + ".  Their Social Security Number is: " +
-                    c.getSSN() + ".  Their phone number is: " + c.getPhoneNum() +
-                    ".  Their salary is: " + c.getSalary() + ".");
-            
-            System.out.println("The first employee's name is: " + d.getName() +
-                    ".  Their hire date is: " + d.getHireDate() + ".  Their address "
-                    + "is: " + d.getAddress() + ".  Their date of birth is: " +
-                    d.getDateOfBirth() + ".  Their Social Security Number is: " +
-                    d.getSSN() + ".  Their phone number is: " + d.getPhoneNum() +
-                    ".  Theirs hourly wage is: " + d.getHourlyWage() + ".  Their"
-                    + " hours worked is: " + d.getHoursWorked()+ ".  Their total"
-                    + " pay is: " + d.getPayTotal() + ".");
+            System.out.println("The first employee's name is: " + e.getName() +
+                    ".  Their hire date is: " + e.getHireDate() + ".  Their address "
+                    + "is: " + e.getAddress() + ".  Their date of birth is: " +
+                    e.getDateOfBirth() + ".  Their Social Security Number is: " +
+                    e.getSSN() + ".  Their phone number is: " + e.getPhoneNum() +
+                    ".  Their salary is: " + e.getSalary() + ".  Their commision "
+                    + "percentage is: " + e.getCommisionPercentage() +" .  Their"
+                    + " total commisionable sales is: " + e.getCommisionedSalesAmount() +
+                    ".  Their total pay is: " + e.getCommisionTotal());
     }
 }    
