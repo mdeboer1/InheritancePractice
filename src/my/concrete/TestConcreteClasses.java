@@ -15,17 +15,17 @@ import java.util.Scanner;
  */
 public class TestConcreteClasses {
     
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-            //Create Scanner variable to user input
+        //Create Scanner variable to user input
 
-            Scanner keyboard = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
 
-            //Create properties for employee information
+        //Create properties for employee information
 
-            String name, hireDate, address, dateOfBirth, SSN, phoneNum;
-            double salary, hourlyWage, hoursWorked, totalPay, commisionPercentage,
-                    commisionedSalesTotal;
+        String name, hireDate, address, dateOfBirth, SSN, phoneNum;
+        double salary, hourlyWage, hoursWorked, totalPay, commisionPercentage,
+                commisionedSalesTotal;
 //
 //        /* This section creates and tests the create of 2 different Employee objects
 //        * First, get user input for the employees to be created, then 2 new Employees 
@@ -89,11 +89,11 @@ public class TestConcreteClasses {
 //                    b.getDateOfBirth() + ".  Their Social Security Number is: " +
 //                    b.getSSN() + ".  Their phone number is: " + b.getPhoneNum() +
 //                    ".");
-            
-            /* This section tests the creation of a salaried and hourly employee 
-            * class object
-            */
-            
+
+        /* This section tests the creation of a salaried and hourly employee 
+        * class object
+        */
+
 //            System.out.println("Enter the employee's name, first and last.");
 //            name = keyboard.nextLine();
 //
@@ -163,43 +163,43 @@ public class TestConcreteClasses {
 //                    ".  Their hourly wage is: " + d.getHourlyWage() + ".  Their"
 //                    + " hours worked is: " + d.getHoursWorked()+ ".  Their total"
 //                    + " pay is: " + d.getPayTotal() + ".");
-            
-                // This section tests a SalaryPlusCommisionEmployee class
-            
+
+            // This section tests a SalaryPlusCommisionEmployee class
+
             System.out.println("Enter the employee's name, first and last.");
             name = keyboard.nextLine();
 
             System.out.println("Enter in the employee's hire date.");
             hireDate = keyboard.nextLine();
-            
+
             System.out.println("Enter in the employee's address.");
             address = keyboard.nextLine();
-            
+
             System.out.println("Enter in the employee's date of birth.");
             dateOfBirth = keyboard.nextLine();
-            
+
             System.out.println("Enter in the employee's Social Security Number.");
             SSN = keyboard.nextLine();
-            
+
             System.out.println("Enter in the employee's phone number.");
             phoneNum = keyboard.nextLine();
-            
+
             System.out.println("Enter in the employee's salary.");
             salary = Double.parseDouble(keyboard.nextLine());
-            
+
             System.out.println("Enter in the employee's commision percentage.");
             commisionPercentage = Double.parseDouble(keyboard.nextLine());
-            
+
             System.out.println("Enter in the employee's total commisionable "
                     + "sales amount.");
             commisionedSalesTotal = Double.parseDouble(keyboard.nextLine());
-            
+
             SalaryPlusCommisionEmployee e = new SalaryPlusCommisionEmployee(name,
                 hireDate, address, dateOfBirth, SSN, phoneNum, salary);
-            
+
             e.setCommisionPercentage(commisionPercentage);
             e.setCommisionedSalesAmount(commisionedSalesTotal);
-            
+
             System.out.println("The first employee's name is: " + e.getName() +
                     ".  Their hire date is: " + e.getHireDate() + ".  Their address "
                     + "is: " + e.getAddress() + ".  Their date of birth is: " +
