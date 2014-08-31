@@ -13,7 +13,7 @@ import java.util.Scanner;
  * 
  * This class tests the my.concrete package classes and inheritance
  */
-public class TestConcreteClasses {
+public class TestTheClasses {
     
     public static void main(String[] args) {
 
@@ -103,15 +103,18 @@ public class TestConcreteClasses {
         h.setCommisionPercentage(commisionPercentage);
         h.setCommisionedSalesAmount(commisionedSalesTotal);
         
+        // Creates abstract package SalariedEmployee
         myabstract.SalariedEmployee i = new myabstract.SalariedEmployee(name, 
                 hireDate, address, dateOfBirth, SSN, phoneNum, salary);
         
+        // Creates abstract package HourlyEmployee
         myabstract.HourlyEmployee j = new myabstract.HourlyEmployee(name, 
                 hireDate, address, dateOfBirth, SSN, phoneNum);
         
         j.setHourlyWage(hourlyWage);
         j.setHoursWorked(hoursWorked);
         
+        // Creates abstract package SalaryPlusCommisionEmployee
         myabstract.SalaryPlusCommisionEmployee k = new myabstract.SalaryPlusCommisionEmployee(name,
                 hireDate, address, dateOfBirth, SSN, phoneNum, salary);
         

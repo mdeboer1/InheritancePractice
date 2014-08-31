@@ -57,6 +57,6 @@ public class SalaryPlusCommisionEmployee extends SalariedEmployee {
     
     public double getCommisionTotal() {
         this.salary = super.getSalary();
-        return commisionedSalesAmount * commisionPercentage + salary;
+        return commisionedSalesAmount * (commisionPercentage / 100) + salary;
     }
 }
