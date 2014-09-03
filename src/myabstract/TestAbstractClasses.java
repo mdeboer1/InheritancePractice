@@ -17,7 +17,7 @@ public class TestAbstractClasses {
         Scanner keyboard = new Scanner(System.in);
         
         String name, hireDate, address, dateOfBirth, SSN, phoneNum;
-        double salary, hourlyWage, hoursWorked, totalPay, commisionPercentage,
+        double salary, hourlyWage, hoursWorked, commisionPercentage,
                 commisionedSalesTotal;
         
         System.out.println("Enter the employee's name, first and last.");
