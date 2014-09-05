@@ -13,17 +13,17 @@ package my.concrete;
 public class Employee {
     
     // String variables used to hold employees biographical information
-    private String name, hireDate, address, dateOfBirth, SSN, phoneNum;
+    private String name, hireDate, address, dateOfBirth, ssn, phoneNum;
     
     //Constructor for Employee
     
     public Employee (String name, String hireDate, String address, String dateOfBirth, 
-            String SSN, String phoneNum){
+            String ssn, String phoneNum){
         this.name = name;
         this.hireDate = hireDate;
         this.address = address;
         this.dateOfBirth = dateOfBirth;
-        this.SSN = SSN;
+        this.ssn = ssn;
         this.phoneNum = phoneNum;
     }
 
@@ -77,14 +77,14 @@ public class Employee {
 
     // Gets employee social security number
     
-    public String getSSN() {
-        return SSN;
+    public String getSsn() {
+        return ssn;
     }
 
     // Sets employee social security number
     
-    public void setSSN(String SSN) {
-        this.SSN = SSN;
+    public void setSSN(String ssn) {
+        this.ssn = ssn;
     }
 
     // Gets employee phone number

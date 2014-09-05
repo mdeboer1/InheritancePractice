@@ -15,17 +15,17 @@ public class SalaryPlusCommisionEmployee extends SalariedEmployee {
     /*create double properties for percentage of commision, commisionable sales 
     *amount and salary
     */
-    private double commisionPercentage, commisionedSalesAmount, salary;
+    private double commisionPercentage, commisionedSalesAmount;
     
     /*constructor for commisioned employee, calls super constructor, sends
     all information to SalariedEmployee
     */
     
     public SalaryPlusCommisionEmployee(String name, String hireDate, 
-            String address, String dateOfBirth, String SSN, String phoneNum, 
+            String address, String dateOfBirth, String ssn, String phoneNum, 
             double salary) {
         
-        super(name, hireDate, address, dateOfBirth, SSN, phoneNum, salary);
+        super(name, hireDate, address, dateOfBirth, ssn, phoneNum, salary);
     }
     
     //returns commision percentage
@@ -57,7 +57,6 @@ public class SalaryPlusCommisionEmployee extends SalariedEmployee {
     */
     
     public double getCommisionTotal() {
-        this.salary = super.getSalary();
-        return commisionedSalesAmount * (commisionPercentage / 100) + salary;
+         return commisionedSalesAmount * (commisionPercentage / 100) + super.getSalary();
     }
 }

@@ -19,9 +19,9 @@ public class SalariedEmployee extends Employee {
     // Constructor, calls Employee constructor, sets salary
     
     public SalariedEmployee(String name, String hireDate, String address, 
-            String dateOfBirth, String SSN, String phoneNum, double salary) {
+            String dateOfBirth, String ssn, String phoneNum, double salary) {
         
-        super(name, hireDate, address, dateOfBirth, SSN, phoneNum);
+        super(name, hireDate, address, dateOfBirth, ssn, phoneNum);
         this.salary = salary;
     }
 

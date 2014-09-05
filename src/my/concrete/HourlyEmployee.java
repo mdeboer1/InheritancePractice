@@ -19,9 +19,9 @@ public class HourlyEmployee extends Employee {
     //construtor, calls SalariedEmployee constructor
     
     public HourlyEmployee(String name, String hireDate, String address, 
-            String dateOfBirth, String SSN, String phoneNum) {
+            String dateOfBirth, String ssn, String phoneNum) {
         
-        super(name, hireDate, address, dateOfBirth, SSN, phoneNum);
+        super(name, hireDate, address, dateOfBirth, ssn, phoneNum);
     }
 
     // Returns hourly wage
