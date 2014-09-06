@@ -16,13 +16,16 @@ public class TestAbstractClasses {
         
         Scanner keyboard = new Scanner(System.in);
         
-        String name, hireDate, address, dateOfBirth, SSN, phoneNum;
+        String fName, lName, hireDate, address, dateOfBirth, SSN, phoneNum;
         double salary, hourlyWage, hoursWorked, commisionPercentage,
                 commisionedSalesTotal;
         
         System.out.println("Enter the employee's name, first and last.");
-        name = keyboard.nextLine();
+        fName = keyboard.nextLine();
 
+        System.out.println("Enter the employee's name, first and last.");
+        lName = keyboard.nextLine();
+        
         System.out.println("Enter in the employee's hire date.");
         hireDate = keyboard.nextLine();
 
@@ -54,47 +57,24 @@ public class TestAbstractClasses {
         commisionedSalesTotal = Double.parseDouble(keyboard.nextLine());
         
         // Creates abstract package SalariedEmployee
-        SalariedEmployee i = new SalariedEmployee(name, 
+        SalariedEmployee i = new SalariedEmployee(fName, lName, 
                 hireDate, address, dateOfBirth, SSN, phoneNum, salary);
         
         // Creates abstract package HourlyEmployee
-        HourlyEmployee j = new HourlyEmployee(name, 
-                hireDate, address, dateOfBirth, SSN, phoneNum);
+        HourlyEmployee j = new HourlyEmployee(fName, hireDate, address, dateOfBirth, SSN, phoneNum);
         
         j.setHourlyWage(hourlyWage);
         j.setHoursWorked(hoursWorked);
         
         // Creates abstract package SalaryPlusCommisionEmployee
-        SalaryPlusCommisionEmployee k = new SalaryPlusCommisionEmployee(name,
+        SalaryPlusCommisionEmployee k = new SalaryPlusCommisionEmployee(fName, lName,
                 hireDate, address, dateOfBirth, SSN, phoneNum, salary);
         
         k.setCommisionPercentage(commisionPercentage);
         k.setCommisionedSalesAmount(commisionedSalesTotal);
         
-        System.out.println("The first employee's name is: " + i.getName() +
-            ".  Their hire date is: " + i.getHireDate() + ".  Their address "
-            + "is: " + i.getAddress() + ".  Their date of birth is: " +
-            i.getDateOfBirth() + ".  Their Social Security Number is: " +
-            i.getSSN() + ".  Their phone number is: " + i.getPhoneNum() +
-            ".  Their salary is: " + i.getSalary() + ".");  
-        
-        System.out.println("The first employee's name is: " + j.getName() +
-                ".  Their hire date is: " + j.getHireDate() + ".  Their address "
-                + "is: " + j.getAddress() + ".  Their date of birth is: " +
-                j.getDateOfBirth() + ".  Their Social Security Number is: " +
-                j.getSSN() + ".  Their phone number is: " + j.getPhoneNum() +
-                ".  Their hourly wage is: " + j.getHourlyWage() + ".  Their"
-                + " hours worked is: " + j.getHoursWorked()+ ".  Their total"
-                + " pay is: " + j.getPayTotal() + ".");
-        
-        System.out.println("The first employee's name is: " + k.getName() +
-                ".  Their hire date is: " + k.getHireDate() + ".  Their address "
-                + "is: " + k.getAddress() + ".  Their date of birth is: " +
-                k.getDateOfBirth() + ".  Their Social Security Number is: " +
-                k.getSSN() + ".  Their phone number is: " + k.getPhoneNum() +
-                ".  Their salary is: " + k.getSalary() + ".  Their commision "
-                + "percentage is: " + k.getCommisionPercentage() +" .  Their"
-                + " total commisionable sales is: " + k.getCommisionedSalesAmount() +
-                ".  Their total pay is: " + k.getCommisionTotal());
+        i.toString();
+        j.toString();
+        k.toString();
     }
 }

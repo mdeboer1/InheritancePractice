@@ -13,31 +13,36 @@ package myabstract;
 public abstract class Employee {
     
     // String variables used to hold employees biographical information
-    private String name, address, dateOfBirth, SSN, phoneNum;
+    private String fName, lName, address, dateOfBirth, ssn, phoneNum;
     
     //Constructor for Employee
     
-    public Employee (String name, String address, String dateOfBirth, 
-            String SSN, String phoneNum){
-        this.name = name;
+    public Employee (String fName, String address, String dateOfBirth, 
+            String ssn, String phoneNum){
+        this.fName = fName;
         this.address = address;
         this.dateOfBirth = dateOfBirth;
-        this.SSN = SSN;
+        this.ssn = ssn;
         this.phoneNum = phoneNum;
     }
     
     // Returns employee name
-    
-    public String getName() {
-        return name;
-    }
-    
-    // Sets employee name
-    
-    public void setName(String name) {
-        this.name = name;
+    public String getFirstName() {
+        return fName;
     }
 
+    public void setFirstName(String fName) {
+        this.fName = fName;
+    }
+
+    public String getLastName() {
+        return lName;
+    }
+
+    //abstract to allow nulls in last name
+    
+    public abstract void setLastName(String lName);
+    
     // Gets employee hire date, to be create in subclass
     
     public abstract String getHireDate();
@@ -72,14 +77,14 @@ public abstract class Employee {
 
     // Gets employee social security number
     
-    public String getSSN() {
-        return SSN;
+    public String getSsn() {
+        return ssn;
     }
 
     // Sets employee social security number
     
-    public void setSSN(String SSN) {
-        this.SSN = SSN;
+    public void setSsn(String SSN) {
+        this.ssn = SSN;
     }
 
     // Gets employee phone number

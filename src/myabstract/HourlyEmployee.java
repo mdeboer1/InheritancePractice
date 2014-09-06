@@ -14,13 +14,13 @@ public class HourlyEmployee extends Employee {
     // Doubles for hourly employee wage information
     
     private double hourlyWage, hoursWorked, totalPay;
-    private String hireDate;
+    private String hireDate, lName;
     //construtor, calls SalariedEmployee constructor
     
-    public HourlyEmployee(String name, String hireDate, String address, 
+    public HourlyEmployee(String fName, String hireDate, String address, 
             String dateOfBirth, String SSN, String phoneNum) {
         
-        super(name, address, dateOfBirth, SSN, phoneNum);
+        super(fName, address, dateOfBirth, SSN, phoneNum);
         this.hireDate = hireDate;
     }
 
@@ -62,5 +62,28 @@ public class HourlyEmployee extends Employee {
     @Override
     public void setHireDate(String hireDate) {
         this.hireDate = hireDate;
+    }
+
+    @Override
+    public void setLastName(String lName) {
+        if (lName == null){
+            this.lName = " ";
+        }
+        else {
+            this.lName = lName;
+        }
+    }
+    
+    @Override
+    public String toString(){
+       String response = "The first employee's name is: " + this.getFirstName() +
+                " " + this.getLastName() + ".  Their hire date is: " + this.getHireDate() + 
+                ".  Their address is: " + this.getAddress() + ".  Their date of birth is: " +
+                this.getDateOfBirth() + ".  Their Social Security Number is: " +
+                this.getSsn() + ".  Their phone number is: " + this.getPhoneNum() +
+                ".  Their hourly wage is: " + this.getHourlyWage() + ".  Their"
+                + " hours worked is: " + this.getHoursWorked()+ ".  Their total"
+                + " pay is: " + this.getPayTotal() + ".";
+       return response;
     }
 }
