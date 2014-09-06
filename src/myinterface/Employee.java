@@ -12,17 +12,19 @@ package myinterface;
  */
 public interface Employee {
     
-    public abstract void setName(String name);
+    public abstract void setFirstName(String fName);
+    public abstract void setLastName(String lName);
     public abstract void setHireDate(String hireDate);
     public abstract void setAddress(String address);
     public abstract void setDateOfBirth(String dateOfBirth);
-    public abstract void setSSN(String SSN);
+    public abstract void setSsn(String SSN);
     public abstract void setPhoneNum(String phoneNum);
-    public abstract String getName();
+    public abstract String getFirstName();
+    public abstract String getLastName();
     public abstract String getHireDate();
     public abstract String getAddress();
     public abstract String getDateOfBirth();
-    public abstract String getSSN();
+    public abstract String getSsn();
     public abstract String getPhoneNum();
     
 }

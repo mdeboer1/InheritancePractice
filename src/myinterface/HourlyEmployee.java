@@ -12,33 +12,40 @@ package myinterface;
  */
 public class HourlyEmployee implements Employee {
     // String variables used to hold employees biographical information
-    private String name, hireDate, address, dateOfBirth, SSN, phoneNum;
+    private String fName, lName, hireDate, address, dateOfBirth, ssn, phoneNum;
     // Doubles for hourly employee wage information
     private double hourlyWage, hoursWorked, totalPay;
     //Constructor for Employee
     
-    public HourlyEmployee (String name, String hireDate, String address, String dateOfBirth, 
-            String SSN, String phoneNum){
-        this.name = name;
+    public HourlyEmployee (String fName, String lName, String hireDate, String address, 
+            String dateOfBirth, String ssn, String phoneNum){
+        this.fName = fName;
+        this.lName = lName;
         this.hireDate = hireDate;
         this.address = address;
         this.dateOfBirth = dateOfBirth;
-        this.SSN = SSN;
+        this.ssn = ssn;
         this.phoneNum = phoneNum;
     }
 
     // Returns employee name
     
     @Override
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return fName;
     }
+    
     
     // Sets employee name
     
     @Override
-    public void setName(String name) {
-        this.name = name;
+    public void setLastName(String lName) {
+        if (lName == null){
+            this.lName = " ";
+        }
+        else {
+            this.lName = lName;
+        }
     }
 
     // Gets employee hire date
@@ -86,15 +93,15 @@ public class HourlyEmployee implements Employee {
     // Gets employee social security number
     
     @Override
-    public String getSSN() {
-        return SSN;
+    public String getSsn() {
+        return ssn;
     }
 
     // Sets employee social security number
     
     @Override
-    public void setSSN(String SSN) {
-        this.SSN = SSN;
+    public void setSsn(String ssn) {
+        this.ssn = ssn;
     }
 
     // Gets employee phone number
@@ -140,5 +147,28 @@ public class HourlyEmployee implements Employee {
     public double getPayTotal() {
         totalPay = hoursWorked * hourlyWage;
         return totalPay;
+    }
+
+    @Override
+    public void setFirstName(String fName) {
+        this.fName = fName;
+    }
+
+    @Override
+    public String getLastName() {
+        return lName;
+    }
+    
+    @Override
+    public String toString(){
+        String response = "The first employee's name is: " + this.getFirstName() +
+                " " + this.getLastName() + ".  Their hire date is: " + this.getHireDate() + 
+                ".  Their address is: " + this.getAddress() + ".  Their date of birth is: " +
+                this.getDateOfBirth() + ".  Their Social Security Number is: " +
+                this.getSsn() + ".  Their phone number is: " + this.getPhoneNum() +
+                ".  Their hourly wage is: " + this.getHourlyWage() + ".  Their"
+                + " hours worked is: " + this.getHoursWorked()+ ".  Their total"
+                + " pay is: " + this.getPayTotal() + ".";
+        return response;
     }
 }

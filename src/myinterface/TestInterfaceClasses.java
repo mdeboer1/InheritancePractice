@@ -22,12 +22,15 @@ public class TestInterfaceClasses {
 
         //Create properties for employee information
 
-        String name, hireDate, address, dateOfBirth, SSN, phoneNum;
+        String fName, lName, hireDate, address, dateOfBirth, SSN, phoneNum;
         double salary, hourlyWage, hoursWorked, commisionPercentage,
                 commisionedSalesTotal;
         
-        System.out.println("Enter the employee's name, first and last.");
-        name = keyboard.nextLine();
+        System.out.println("Enter the employee's first name, first and last.");
+        fName = keyboard.nextLine();
+        
+        System.out.println("Enter the employee's second name, first and last.");
+        lName = keyboard.nextLine();
 
         System.out.println("Enter in the employee's hire date.");
         hireDate = keyboard.nextLine();
@@ -60,47 +63,25 @@ public class TestInterfaceClasses {
         commisionedSalesTotal = Double.parseDouble(keyboard.nextLine());
         
         // Creates interface package SalariedEmployee
-        SalariedEmployee f = new SalariedEmployee(name, hireDate, address,
+        SalariedEmployee f = new SalariedEmployee(fName, lName, hireDate, address,
             dateOfBirth, SSN, phoneNum, salary);
 
         // Creates interface package HourlyEmployee
-        HourlyEmployee g = new HourlyEmployee(name, 
+        HourlyEmployee g = new HourlyEmployee(fName, lName, 
                 hireDate, address, dateOfBirth, SSN, phoneNum);
         
         g.setHourlyWage(hourlyWage);
         g.setHoursWorked(hoursWorked);
         
         // Creates interface package SalaryPlusCommisionEmployee
-        SalaryPlusCommisionEmployee h = new SalaryPlusCommisionEmployee(name,
+        SalaryPlusCommisionEmployee h = new SalaryPlusCommisionEmployee(fName, lName,
                 hireDate, address, dateOfBirth, SSN, phoneNum, salary);
         
         h.setCommisionPercentage(commisionPercentage);
         h.setCommisionedSalesAmount(commisionedSalesTotal);
-        
-        System.out.println("The first employee's name is: " + f.getName() +
-                    ".  Their hire date is: " + f.getHireDate() + ".  Their address "
-                    + "is: " + f.getAddress() + ".  Their date of birth is: " +
-                    f.getDateOfBirth() + ".  Their Social Security Number is: " +
-                    f.getSSN() + ".  Their phone number is: " + f.getPhoneNum() +
-                    ".  Their salary is: " + f.getSalary() + ".");
 
-        System.out.println("The first employee's name is: " + g.getName() +
-                ".  Their hire date is: " + g.getHireDate() + ".  Their address "
-                + "is: " + g.getAddress() + ".  Their date of birth is: " +
-                g.getDateOfBirth() + ".  Their Social Security Number is: " +
-                g.getSSN() + ".  Their phone number is: " + g.getPhoneNum() +
-                ".  Their hourly wage is: " + g.getHourlyWage() + ".  Their"
-                + " hours worked is: " + g.getHoursWorked()+ ".  Their total"
-                + " pay is: " + g.getPayTotal() + ".");
-
-        System.out.println("The first employee's name is: " + h.getName() +
-                ".  Their hire date is: " + h.getHireDate() + ".  Their address "
-                + "is: " + h.getAddress() + ".  Their date of birth is: " +
-                h.getDateOfBirth() + ".  Their Social Security Number is: " +
-                h.getSSN() + ".  Their phone number is: " + h.getPhoneNum() +
-                ".  Their salary is: " + h.getSalary() + ".  Their commision "
-                + "percentage is: " + h.getCommisionPercentage() +" .  Their"
-                + " total commisionable sales is: " + h.getCommisionedSalesAmount() +
-                ".  Their total pay is: " + h.getCommisionTotal());
+        f.toString();
+        g.toString();        
+        h.toString();
     }
 }
