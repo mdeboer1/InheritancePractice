@@ -21,11 +21,10 @@ public class SalaryPlusCommisionEmployee extends SalariedEmployee {
     all information to SalariedEmployee
     */
     
-    public SalaryPlusCommisionEmployee(String name, String hireDate, 
-            String address, String dateOfBirth, String ssn, String phoneNum, 
-            double salary) {
+    public SalaryPlusCommisionEmployee(String fName, String lName, String hireDate, String address, 
+            String dateOfBirth, String ssn, String phoneNum, double salary) {
         
-        super(name, hireDate, address, dateOfBirth, ssn, phoneNum, salary);
+        super(fName, lName, hireDate, address, dateOfBirth, ssn, phoneNum, salary);
     }
     
     //returns commision percentage
@@ -58,5 +57,19 @@ public class SalaryPlusCommisionEmployee extends SalariedEmployee {
     
     public double getCommisionTotal() {
          return commisionedSalesAmount * (commisionPercentage / 100) + super.getSalary();
+    }
+    
+    @Override
+    public String toString(){
+        String response = "The first employee's name is: " + this.getFirstName() +
+                " " +this.getLastName() + ".  Their hire date is: " + this.getHireDate() + 
+                ".  Their address " + "is: " + this.getAddress() + ".  Their date "
+                + "of birth is: " + this.getDateOfBirth() + ".  Their Social Security"
+                + " Number is: " + this.getSsn() + ".  Their phone number is: " + 
+                this.getPhoneNum() + ".  Their salary is: " + this.getSalary() +
+                ".  Their commision " + "percentage is: " + this.getCommisionPercentage() +
+                " .  Their total commisionable sales is: " + this.getCommisionedSalesAmount() +
+                ".  Their total pay is: " + this.getCommisionTotal();
+        return response;
     }
 }

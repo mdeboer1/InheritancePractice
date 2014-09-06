@@ -13,13 +13,14 @@ package my.concrete;
 public class Employee {
     
     // String variables used to hold employees biographical information
-    private String name, hireDate, address, dateOfBirth, ssn, phoneNum;
+    private String fName, lName, hireDate, address, dateOfBirth, ssn, phoneNum;
     
     //Constructor for Employee
     
-    public Employee (String name, String hireDate, String address, String dateOfBirth, 
+    public Employee (String fName, String lName, String hireDate, String address, String dateOfBirth, 
             String ssn, String phoneNum){
-        this.name = name;
+        this.fName = fName;
+        this.lName = lName;
         this.hireDate = hireDate;
         this.address = address;
         this.dateOfBirth = dateOfBirth;
@@ -29,16 +30,24 @@ public class Employee {
 
     // Returns employee name
     
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return fName;
     }
     
     // Sets employee name
     
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String fName) {
+        this.fName = fName;
     }
 
+    public String getLastName() {
+        return lName;
+    }
+
+    public void setLastName(String lName) {
+        this.lName = lName;
+    }
+    
     // Gets employee hire date
     
     public String getHireDate() {
@@ -98,4 +107,16 @@ public class Employee {
     public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
+    
+    @Override
+    public String toString(){
+        String response = "The first employee's name is: " + this.getFirstName() +
+                " " + this.getLastName() + ".  Their hire date is: " + this.getHireDate() +
+                ".  Their address " + "is: " + this.getAddress() + ".  Their date of "
+                + "birth is: " + this.getDateOfBirth() + ".  Their Social Security "
+                + "Number is: " + this.getSsn() + ".  Their phone number is: " + 
+                this.getPhoneNum() + ".";
+        return response;
+    }
+    
 }

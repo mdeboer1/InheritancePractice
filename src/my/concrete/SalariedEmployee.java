@@ -18,10 +18,10 @@ public class SalariedEmployee extends Employee {
 
     // Constructor, calls Employee constructor, sets salary
     
-    public SalariedEmployee(String name, String hireDate, String address, 
+    public SalariedEmployee(String fName, String lName, String hireDate, String address, 
             String dateOfBirth, String ssn, String phoneNum, double salary) {
         
-        super(name, hireDate, address, dateOfBirth, ssn, phoneNum);
+        super(fName, lName, hireDate, address, dateOfBirth, ssn, phoneNum);
         this.salary = salary;
     }
 
@@ -35,5 +35,16 @@ public class SalariedEmployee extends Employee {
     
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+    
+    @Override
+    public String toString(){
+        String response = "The first employee's name is: " + this.getFirstName() +
+                " " + this.getLastName() + ".  Their hire date is: " + this.getHireDate() + 
+                ".  Their address " + "is: " + this.getAddress() + ".  Their date of "
+                + "birth is: " + this.getDateOfBirth() + ".  Their Social Security"
+                + " Number is: " + this.getSsn() + ".  Their phone number is: " + 
+                this.getPhoneNum() + ".  Their salary is: " + this.getSalary() + ".";
+        return response;
     }
 }
